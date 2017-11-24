@@ -1,0 +1,4 @@
+insert into question(id, content, email, name, subject, votes) values (1, 'What technologies did you use', 'Mihai@gmail.com', 'Miahi', 'Demo', 0);
+insert into question(id, content, email, name, subject, votes) values (2, 'Why do you have bush in user interface', 'Andrei@gmail.com', 'Andrei', 'Bugs', 1);
+insert into question(id, content, email, name, subject, votes) values (3, 'Can i break the sign?', 'Ionut@gmail.com', 'Ionut', 'Third question', 2);
+insert into question(id, content, email, name, subject, votes) values (4, 'Where is my phone?' , 'Bontea@gmail.com', 'Ionel', 'Another question', 3);
