@@ -1,0 +1,45 @@
+<!-- Display questions guest view -->
+<div data-ng-init="getQuestions()">
+    {{}}
+    <!-- Question details -->
+    <div id="questionDetails" ng-show="questions.length != 0">
+        <!-- Search drop down-->
+        <div class="form-group">
+            Order By:
+            <select class="form" ng-model="questionSortOrder">
+                <option value="+subject" selected="selected">Subject</option>
+                <option value="+content">Content</option>
+                <option value="+name">Name</option>
+            </select>
+        </div>
+
+        <!-- Question Table -->
+        <div class="container">
+            <table class="table table-striped table-hover">
+                <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Content</th>
+                    <th>Name</th>
+                    <th>Votes</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="question in questions | orderBy:questionSortOrder">
+                    <td>{{question.subject}}</td>
+                    <td>{{question.content}}</td>
+                    <td>{{question.name}}</td>
+                    <td>
+                        <button class="btn btn-info" ng-click="voteQuestion(question)">
+                            Vote
+                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                            <span class="badge">{{question.votes}}</span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

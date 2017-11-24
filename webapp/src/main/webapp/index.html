@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="questionsApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Easy Audience Interaction</title>
+    <link rel="stylesheet" href="app/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="app/css/app.css"/>
+    <link rel="stylesheet" href="app/css/custom.css"/>
+</head>
+
+<body ng-cloak>
+
+<div ng-include="'templates/Navbar.html'"></div>
+
+<div class="wrapper">
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+    <div class="push"></div>
+</div>
+
+<div ng-include="'templates/Footer.html'"></div>
+
+<script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="/app/lib/underscore-1.4.4.min.js"></script>
+<script src="/app/lib/bootstrap.min.js"></script>
+<script src="/app/lib/angular/angular.js"></script>
+<script src="/app/lib/angular/angular-route.min.js"></script>
+<script src="/app/js/app.js"></script>
+<script src="/app/js/controllers/QuestionController.js"></script>
+<script src="/app/js/controllers/LoginController.js"></script>
+<script src="/app/js/services/QuestionData.js"></script>
+<script src="/app/js/services/LoginData.js"></script>
+<script src="/app/js/services/MailData.js"></script>
+
+</body>
+
+</html>

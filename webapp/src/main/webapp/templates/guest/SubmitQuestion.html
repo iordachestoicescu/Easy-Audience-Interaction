@@ -1,0 +1,31 @@
+<!-- Submit question -->
+<button class="btn btn-info" ng-click="prepareSubmitQuestionForm()"> Submit Question </button>
+<div id="modalQuestionForm" class="modal">
+    <div class="modal-content">
+        <span id="closeQuestionForm" class="close">&times;</span>
+        <form name="submitQuestion" ng-submit="addQuestion(subject, name, email, content)">
+
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" required placeholder="Add name" ng-model="name" ng-value="name">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" class="form-control" placeholder="Add email" ng-model="email" ng-value="email">
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" class="form-control" required placeholder="Add subject" ng-model="subject"
+                       ng-value="subject">
+            </div>
+            <div class="form-group">
+                <label>Question</label>
+                <textarea class="form-control" placeholder="Add question" ng-model="content"
+                          ng-value="content"></textarea>
+            </div>
+
+            <input class="btn btn-info" type="submit" value="Submit">
+        </form>
+        {{addQuestionStat}}
+    </div>
+</div>

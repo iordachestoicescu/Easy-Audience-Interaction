@@ -1,0 +1,33 @@
+<!-- Submit response -->
+<div id="modalSubmitForm" class="modal">
+    <div class="modal-content">
+        <span id="closeSubmitForm" class="close">&times;</span>
+        <form name="submitQuestion" ng-submit="sendResponse(username, password, receiver, subject, content)">
+            <div class="form-group">
+                <label>Username</label>
+                <input class="form-control" type="email" name="firstname" required placeholder="Add username"
+                       ng-model="username"><br>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" name="lastname" required placeholder="Add password"
+                       ng-model="password"><br>
+            </div>
+            <div class="form-group">
+                <label>Receiver</label>
+                <input type="email" class="form-control" required placeholder="Add receiver" ng-model="receiver" ng-value="receiver">
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" class="form-control" placeholder="Add subject" ng-model="subject" ng-value="subject">
+            </div>
+            <div class="form-group">
+                <label>Content</label>
+                <textarea class="form-control" id="sendMail" placeholder="Add content" ng-model="content" ng-value="content"></textarea>
+            </div>
+
+            <input class="btn btn-info" type="submit" value="Submit">
+            <p class="text-danger">{{sendMailStat}}</p>
+        </form>
+    </div>
+</div>

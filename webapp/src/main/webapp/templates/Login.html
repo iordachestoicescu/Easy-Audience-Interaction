@@ -1,0 +1,12 @@
+<!-- Login view -->
+<div align="center">
+    <h1 class="page-header">{{title}}</h1>
+
+    <form name="login" ng-submit="adminLogin(username, password)">
+        <input class="input" type="text" name="firstname" required placeholder="Username" ng-model="username"><br>
+        <input class="input" type="password" name="lastname" required placeholder="Password" ng-model="password"><br>
+        <br>
+        <input class="btn btn-sm btn-info btn-lg" type="submit" value="Login">
+    </form>
+    <div>{{loginMessage}}</div>
+</div>
